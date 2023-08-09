@@ -136,3 +136,71 @@
 
 23. **Define garbage collection in Java**:
     Garbage collection is an automatic process in Java that identifies and removes objects that are no longer reachable and are thus no longer needed by the program. This helps in managing memory efficiently and prevents memory leaks.
+    
+    **unit 2**
+
+
+1. **Define Inheritance? List types of inheritances in Java**:
+   Inheritance is a fundamental concept in object-oriented programming where a new class (subclass or derived class) is created by inheriting properties and behaviors from an existing class (superclass or base class). It promotes code reuse and supports the "is-a" relationship between classes.
+   
+   Types of inheritances in Java:
+   - **Single Inheritance**: A subclass extends a single superclass.
+   - **Multiple Inheritance (Interface Inheritance)**: A subclass implements multiple interfaces. (Java achieves this using interfaces)
+   - **Multilevel Inheritance**: A class is derived from another class, which is itself derived from another class.
+   - **Hierarchical Inheritance**: Multiple classes extend a single superclass.
+   - **Hybrid Inheritance**: A combination of multiple and multilevel inheritance.
+
+2. **Write about Member access rules**:
+   In Java, there are four access modifiers that control the visibility and accessibility of class members (fields and methods):
+   - **`public`**: Members can be accessed from anywhere.
+   - **`protected`**: Members can be accessed within the same package or by subclasses.
+   - **`default` (no modifier)**: Members can be accessed within the same package.
+   - **`private`**: Members can be accessed only within the same class.
+
+3. **Write Uses of 'Super' keyword**:
+   The `super` keyword in Java is used to refer to the superclass's members (fields or methods) from within a subclass. It's used to resolve ambiguity, call superclass constructors, and access overridden methods.
+
+4. **Write using 'final' keyword with inheritance**:
+   When a class is marked as `final`, it cannot be inherited, meaning it can't be used as a superclass. If you declare a class as `final`, it indicates that you don't want it to have any subclasses.
+
+5. **What is the difference between final, finally, and finalize keywords in Java**:
+   - `final`: It's a keyword used to indicate that a variable, method, or class cannot be changed or overridden.
+   - `finally`: It's a code block used in try-catch-finally to ensure that certain code is executed regardless of exceptions being thrown or not.
+   - `finalize`: It's a method in the `Object` class that's called by the garbage collector before an object is deallocated. It's used to perform cleanup operations.
+
+6. **Explain about Object class**:
+   The `Object` class is the root class of all Java classes. Every class in Java is either directly or indirectly derived from the `Object` class. It provides basic methods such as `equals()`, `hashCode()`, `toString()`, and `getClass()`, which can be overridden in subclasses.
+
+7. **Define abstract classes**:
+   An abstract class is a class that cannot be instantiated and is meant to be subclassed. It may contain abstract methods (methods without implementation) that must be overridden by its subclasses. Abstract classes can also have concrete methods with implementation.
+
+8. **Differences between method overloading and method overriding**:
+   - **Method Overloading**: Involves defining multiple methods in the same class with the same name but different parameters. The methods must have different parameter lists (number or types of parameters).
+   - **Method Overriding**: Occurs when a subclass provides a specific implementation for a method that is already defined in its superclass. The method signature (name and parameter list) must be the same in both classes.
+
+9. **Difference between class, abstract class, and interface**:
+   - **Class**: A blueprint that can be instantiated into objects. It can have fields, methods, constructors, etc.
+   - **Abstract Class**: A class that cannot be instantiated and may contain abstract methods. It's meant to be subclassed.
+   - **Interface**: A reference type that defines a contract for its implementers. It only contains abstract methods and constant fields.
+
+10. **Define inner class**:
+    An inner class is a class that is defined within another class. It has access to the members (fields and methods) of the outer class and can be used for various purposes like encapsulation and organization.
+
+11. **List out the inner classes**:
+    There are four types of inner classes in Java:
+    - **Member Inner Class**: Defined at the member level of a class.
+    - **Static Nested Class**: Similar to a member inner class but declared as static.
+    - **Local Inner Class**: Defined within a block of code, like a method.
+    - **Anonymous Inner Class**: A special case of a local inner class without a name.
+
+12. **What is method overriding**:
+    Method overriding is the process of defining a method in a subclass with the same name, return type, and parameters as a method in its superclass. The overridden method in the subclass provides a specific implementation while adhering to the same method signature.
+
+13. **What is an interface**:
+    An interface in Java is a reference type that defines a contract for its implementers. It only contains abstract methods (methods without a body) and constant fields. Implementing an interface requires a class to provide concrete implementations for the interface's methods.
+
+14. **What is a package**:
+    A package in Java is a way to organize related classes and interfaces into a hierarchical structure. It helps avoid naming conflicts and provides a systematic way to manage and group related code elements.
+
+15. **Which keyword is used to import a package**:
+    The `import` keyword is used to import a package in Java. It allows you to access classes and other members from the imported package without using their fully qualified names.
