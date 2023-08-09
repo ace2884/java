@@ -137,7 +137,7 @@
 23. **Define garbage collection in Java**:
     Garbage collection is an automatic process in Java that identifies and removes objects that are no longer reachable and are thus no longer needed by the program. This helps in managing memory efficiently and prevents memory leaks.
     
-    **unit 2**
+    ***unit 2***
 
 
 1. **Define Inheritance? List types of inheritances in Java**:
