@@ -204,3 +204,166 @@
 
 15. **Which keyword is used to import a package**:
     The `import` keyword is used to import a package in Java. It allows you to access classes and other members from the imported package without using their fully qualified names.
+
+
+ ***unit 3***
+
+ 
+ **Exception:**
+An exception in Java is an event that occurs during the execution of a program and disrupts the normal flow of instructions. Exceptions are used to handle various error situations, like invalid input, file not found, or division by zero. Java provides a robust exception-handling mechanism that helps manage and recover from such errors.
+
+**Superclass for All Exception Classes:**
+The superclass for all exception classes in Java is `java.lang.Throwable`. It has two main subclasses: `java.lang.Error` (for severe system errors) and `java.lang.Exception` (for non-fatal errors that can be caught and handled).
+
+**Usage of `throw` Keyword:**
+The `throw` keyword is used to explicitly throw an exception in Java. It's typically used within methods to indicate that an exceptional condition has occurred, and the program should exit the current flow and handle the exception elsewhere.
+
+**Exceptions Thrown Using `throws` Keyword:**
+The `throws` keyword is used in a method signature to indicate that the method may throw specific types of exceptions. It doesn't throw exceptions itself but rather declares that exceptions might be thrown during the execution of the method.
+
+**Usage of `finally` Block:**
+The `finally` block is used to define a code section that will always be executed, whether an exception is thrown or not. It's often used for cleanup tasks that need to be performed regardless of whether an exception occurs.
+
+**Thread:**
+A thread is a unit of execution in a program. It's the smallest sequence of programmed instructions that can be managed by the operating system. Threads allow concurrent execution of different parts of a program, enabling better utilization of system resources and improved responsiveness.
+
+**Thread States:**
+Thread states in Java include:
+1. **New:** The thread has been created but has not yet started.
+2. **Runnable:** The thread is executing or ready to execute.
+3. **Blocked/Waiting:** The thread is waiting for a resource or event.
+4. **Timed Waiting:** The thread is waiting for a specific period of time.
+5. **Terminated:** The thread has finished execution.
+
+**Usage of `run` Method:**
+The `run` method is the entry point for code that will be executed in a separate thread. It's the method that you override when you implement the `Runnable` interface or extend the `Thread` class.
+
+**Setting Thread Priority:**
+The `setPriority(int priority)` method is used to set the priority of a thread. Thread priorities range from 1 (lowest) to 10 (highest).
+
+**Invoking a Waiting Thread:**
+The `notify()` or `notifyAll()` methods are used to wake up a thread that's waiting for a resource. These methods are typically called by one thread to signal other waiting threads.
+
+**Synchronizing Threads:**
+The `synchronized` keyword is used to synchronize access to a code block or method, allowing only one thread to execute the synchronized code at a time. This prevents multiple threads from interfering with each other's execution.
+
+**Usage of `try` and `catch`:**
+The `try` block is used to enclose code that might generate exceptions. The `catch` block follows the `try` block and contains code to handle the exceptions that might be thrown within the `try` block.
+
+**Usage of `throw`, `throws`, and `finally`:**
+- `throw`: Used to explicitly throw an exception.
+- `throws`: Used in method declarations to specify the exceptions that a method might throw.
+- `finally`: Used to define code that will be executed regardless of whether an exception occurs.
+
+**Differences between `throw` and `throws`:**
+- `throw`: Used to throw an exception explicitly within a method.
+- `throws`: Used in method signatures to declare the exceptions that a method might throw.
+
+**Differences between Process and Thread:**
+- **Process:** A process is an independent and self-contained program with its own memory space and resources. Processes don't share memory, and communication between processes is more complex (usually requires inter-process communication mechanisms).
+- **Thread:** A thread is a lightweight unit of execution within a process. Threads share the same memory space and resources within a process, making communication between threads easier. Threads can execute concurrently, allowing for more efficient multitasking.
+
+
+ ***unit 4 and 5***   
+
+
+**AWT Class Hierarchy:**
+The Abstract Window Toolkit (AWT) is a set of classes in Java used for creating graphical user interfaces. The AWT class hierarchy is a tree structure where each class represents a GUI component or layout manager. At the root of the hierarchy is the `java.awt.Component` class, which is the base class for all AWT components.
+
+**Swing vs. AWT:**
+Swing is a more modern and flexible GUI framework built on top of AWT. While AWT provides basic components, Swing offers a richer set of components that are lightweight and platform-independent. Swing components are painted entirely by Java code, which allows for a consistent look and feel across different platforms. AWT components, on the other hand, are often dependent on the underlying operating system's widgets.
+
+**Subclasses of JButton:**
+The `JButton` class is a subclass of the `AbstractButton` class. Some of the subclasses of `JButton` include:
+- `JToggleButton`: Represents a button that can be toggled on and off.
+- `JCheckBox`: Represents a checkbox.
+- `JRadioButton`: Represents a radio button.
+- `JMenuItem`: Represents a menu item.
+
+**GridLayout vs. BorderLayout:**
+- `GridLayout`: Divides the container into a grid of rows and columns, with each grid cell containing a single component. Components are placed in the cells from left to right, top to bottom.
+- `BorderLayout`: Divides the container into five regions: North, South, East, West, and Center. Each region can hold a single component, and components are sized to fill the available space in their respective regions.
+
+**Swing Menu Classes:**
+- `JMenuBar`: Represents the menu bar at the top of a window.
+- `JMenu`: Represents a drop-down menu.
+- `JMenuItem`: Represents an item within a menu.
+- `JPopupMenu`: Represents a context menu that appears on right-click.
+
+**Limitations of AWT:**
+1. **Platform Dependence:** AWT components often rely on the underlying operating system's widgets, which can result in inconsistent behavior and appearance across different platforms.
+2. **Limited Components:** AWT provides a limited set of components compared to Swing, making it less versatile for creating complex GUIs.
+3. **Performance:** AWT components can be relatively slow due to their reliance on the operating system's native graphics operations.
+4. **Lack of Customization:** AWT components might be challenging to customize in terms of appearance and behavior.
+
+**Applet Classes Declared as Public:**
+Applet classes need to be declared as public because the Java runtime environment needs to access and instantiate them from external classes and packages. Declaring the class as public allows the applet to be accessible by the Java runtime environment and any external components that interact with the applet.
+
+**Differences between JToggleButton and JRadioButton:**
+- `JToggleButton` represents a button that can be toggled on and off, whereas `JRadioButton` represents a single-selection button typically used in groups.
+- `JToggleButton` does not belong to a group, while `JRadioButton` buttons in the same group ensure only one can be selected at a time.
+- `JToggleButton` is suitable for options that can be independently selected or deselected. `JRadioButton` is used for mutually exclusive options.
+
+**Adapter Class:**
+An adapter class is a class that provides empty default implementations for all methods in an interface, allowing you to create a subclass and override only the methods you need. It's useful when you're interested in only a subset of the methods provided by an interface.
+
+Example:
+```java
+import java.awt.event.*;
+
+class MyAdapter extends MouseAdapter {
+    public void mouseClicked(MouseEvent e) {
+        System.out.println("Mouse clicked at: " + e.getX() + ", " + e.getY());
+    }
+}
+
+// In your code, you can use the adapter like this:
+MyAdapter adapter = new MyAdapter();
+someComponent.addMouseListener(adapter);
+```
+
+**Definitions of Swing Components:**
+- `JFrame`: A top-level window with decorations, including title bar, minimize, maximize, and close buttons.
+- `JApplet`: A component that runs within a web browser and provides interactive content.
+- `JDialog`: A modal or non-modal dialog box, often used for alerts, input, or user interactions.
+- `JPanel`: A container used to group and organize other components.
+
+**Definitions of Some Swing Components:**
+- `JButton`: A clickable button.
+- `JLabel`: A non-editable text or image display area.
+- `JTextField`: A single-line text input field.
+- `JTextArea`: A multi-line text input area.
+
+**Layout Management:**
+Layout management refers to how GUI components are organized and positioned within a container. Layout managers handle the sizing and positioning of components based on specific rules, ensuring proper arrangement regardless of the platform's screen size or resolution.
+
+**Events, Event Sources, Event Classes, and Event Listeners:**
+- **Events:** Events are occurrences triggered by user interactions or system actions.
+- **Event Sources:** Objects that generate events, like buttons, text fields, etc.
+- **Event Classes:** Java classes representing different types of events, such as `ActionEvent`, `MouseEvent`, etc.
+- **Event Listeners:** Interfaces or classes that listen for specific events and provide methods to handle those events.
+
+**Relationship between Event Sources and Listeners:**
+Event sources register listeners, and when an event occurs, the source calls the appropriate listener's method to handle the event. This allows components to respond to user interactions.
+
+**Delegation Event Model:**
+The Delegation Event Model is used in Java to handle events. It involves three participants: event source, event object, and event listener. The event source generates an event object when an event occurs, and the event listener (registered with the event source) responds to the event by invoking specific methods.
+
+**Events for Handling Button Click:**
+The primary event for handling button clicks is the `ActionEvent`. You attach an `ActionListener` to a button, and when the button is clicked, the `actionPerformed` method of the listener is executed.
+
+**Events for Handling Mouse Events:**
+Mouse events include `MouseEvent`, which includes events like `mouseClicked`, `mousePressed`, `mouseReleased`, `mouseEntered`, and `mouseExited`. You can attach `MouseListener` to components to handle these events.
+
+**Differences between Applet and Application:**
+- **Applet:** A small Java program that runs within a web browser, used for creating interactive content on web pages.
+- **Application:** A standalone Java program that runs independently on a computer, typically with its own window and user interface.
+
+**Applet Life Cycle:**
+1. **init():** Initializes the applet, called when the applet is first loaded.
+2. **start():** Starts the applet's execution.
+3. **stop():** Pauses the applet's execution.
+4. **destroy():** Terminates the applet's execution, called when the applet is being unloaded.
+
+Keep in mind that the Applet API has been largely deprecated due to security and compatibility concerns, and modern Java development primarily focuses on standalone applications.
+
